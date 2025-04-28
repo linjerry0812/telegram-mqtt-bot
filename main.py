@@ -2,6 +2,14 @@ import os
 import logging
 from telegram.ext import Updater, MessageHandler, Filters
 import paho.mqtt.publish as publish
+from dotenv import load_dotenv
+
+# 載入 .env 檔案
+load_dotenv()
+
+# 接下來一樣讀取環境變數
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+# 其他維持不變
 
 # 設定日誌
 logging.basicConfig(level=logging.INFO)
